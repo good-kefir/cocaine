@@ -30,6 +30,15 @@ public class Cocaine : ICocaine, IRegister, IInjector, ICleaner
         self.assemblyProviers.add(object: assembly, key:key)
     }
     
+    public func Register(module: IModule) {
+        
+        let assemblys = module.assemblys()
+        
+        for assembly in assemblys{
+            Register(assembly: assembly)
+        }
+    }
+    
     //MARK: IInjector
     
     public func Inject<T>() -> T? {

@@ -10,4 +10,5 @@ import Foundation
 
 public protocol IRegister{
     func Register(assembly:IAssembly)
+    func Register(module:IModule)
 }

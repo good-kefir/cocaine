@@ -35,7 +35,7 @@ class CocaineTests: XCTestCase {
         
         self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
             
-             return TestService2()
+            return TestService2(id: "2")
         })
         
         let service1:ITestService1? = cocaine.injector.Inject()
@@ -54,7 +54,7 @@ class CocaineTests: XCTestCase {
                
                self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
                    
-                    return TestService2()
+                return TestService2(id: "2")
                })
         
         let service1_v1:TestService1? = cocaine.injector.Inject(type: ITestService1.self) as? TestService1
@@ -71,7 +71,7 @@ class CocaineTests: XCTestCase {
                       
         self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
                                 
-                                 return TestService2()
+            return TestService2(id: "2")
                             })
         
         var service2:ITestService2? = cocaine.injector.Inject()
@@ -80,6 +80,19 @@ class CocaineTests: XCTestCase {
         self.cocaine.cleaner.CleanInstance(type: ITestService2.self)
         service2 = cocaine.injector.Inject()
         XCTAssert(service2 == nil)
+    }
+    
+    func testModule(){
+        
+        let module:TestModule = TestModule()
+        self.cocaine.register.Register(module: module)
+        
+        let service1:ITestService1? = cocaine.injector.Inject()
+        XCTAssert(service1 != nil)
+               
+        let service2:ITestService2? = cocaine.injector.Inject()
+        XCTAssert(service2 != nil)
+        
     }
     
     func testExample() {

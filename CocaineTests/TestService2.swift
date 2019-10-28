@@ -14,7 +14,13 @@ protocol ITestService2 : class {
 
 class TestService2 : ITestService2, Equatable
 {
+    let id:String
+          
+    required init(id:String){
+                 self.id = id
+             }
+    
     static func ==(lhs: TestService2, rhs: TestService2) -> Bool {
-        return lhs == rhs
+        return lhs.id == rhs.id
     }
 }
