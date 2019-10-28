@@ -11,12 +11,14 @@ import Cocaine
 
 class ViewController: UIViewController
 {
-    weak var service1:ITestService1? = tryInject()
-    weak var service2:ITestService2? = tryInject()
+    var service1:ITestService1 = Inject()
+    var service2:ITestService2 = Inject()
    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(service1)
+        print(service2)
         
         // Do any additional setup after loading the view, typically from a nib.
     }

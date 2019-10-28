@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public func tryInject<T>() -> T!{
+public func Inject<T>() -> T!{
     
     let application:I_Application = UIApplication.shared as! Application
     return application.cocaine.injector.Inject()

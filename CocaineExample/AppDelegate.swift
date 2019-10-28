@@ -14,13 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var testService1:ITestService1 = tryInject()
-    var testService2:ITestService2 = tryInject()
+    var testService1:ITestService1 = Inject()
+    var testService2:ITestService2 = Inject()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         print(testService1)
-        print(testService2.param1)
+        print(testService2)
         
         
         return true
