@@ -8,15 +8,13 @@
 
 import Foundation
 
-protocol I_TestService2 : class {
+protocol ITestService2 : class {
     
 }
 
-class TestService2 : I_TestService2, Equatable
+class TestService2 : ITestService2, Equatable
 {
     static func ==(lhs: TestService2, rhs: TestService2) -> Bool {
         return lhs == rhs
     }
-    
-    
 }

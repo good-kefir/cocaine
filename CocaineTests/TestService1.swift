@@ -8,15 +8,19 @@
 
 import Foundation
 
-protocol I_TestService1 : class  {
+protocol ITestService1 : class  {
     
 }
 
-class TestService1 : I_TestService1, Equatable
+class TestService1 : ITestService1, Equatable
 {
-    static func ==(lhs: TestService1, rhs: TestService1) -> Bool {
-        return lhs == rhs
+    let id:String
+    
+    required init(id:String){
+        self.id = id
     }
     
-
+    static func == (lhs: TestService1, rhs: TestService1) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

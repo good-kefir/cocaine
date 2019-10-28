@@ -11,4 +11,5 @@ import Foundation
 public protocol IInjector {
  
     func Inject<T>() -> T?
+    func Inject<T:Any>(type:T) -> AnyObject?
 }

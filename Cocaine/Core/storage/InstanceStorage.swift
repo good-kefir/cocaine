@@ -67,6 +67,13 @@ class InstanceStorage<T:AnyObject>: IInstanceStorage
         }
     }
     
+    func remove(key:String){
+        
+        self.executeThreadSaveOperation {
+                   self.storage.removeObject(forKey:  NSString(string:key))
+               }
+    }
+    
     func all() -> [T]
     {
         var all_objects:[T] = [];

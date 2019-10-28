@@ -11,7 +11,6 @@ import Cocaine
 @testable import Cocaine
 
 
-
 class CocaineTests: XCTestCase {
     
     var cocaine:ICocaine!
@@ -30,51 +29,57 @@ class CocaineTests: XCTestCase {
     
     func testAdd(){
         
-//        cocaine.register.register(assembly: Assembly.init(buildType: I_TestService1.self, memoryPolicy: .Strong, instanceScope: .Singleton, buildBlock: { () -> AnyObject in
-//            return TestService1()
-//        }))
-//
-//        cocaine.register.register(assembly: Assembly.init(buildType: I_TestService2.self, memoryPolicy: .Strong, instanceScope: .Singleton, buildBlock: { () -> AnyObject in
-//            return TestService2()
-//        }))
+        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService1.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+            return TestService1(id: "1")
+        })
         
-        let service1:I_TestService1? = cocaine.injector.tryInject()
+        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+            
+             return TestService2()
+        })
+        
+        let service1:ITestService1? = cocaine.injector.Inject()
         XCTAssert(service1 != nil)
         
-        let service2:I_TestService2? = cocaine.injector.tryInject()
+        let service2:ITestService2? = cocaine.injector.Inject()
         XCTAssert(service2 != nil)
-        
     }
     
     
-    func testSingleton(){
+    func testSingleton()
+    {
+        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService1.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+            return TestService1(id: "1")
+               })
+               
+               self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+                   
+                    return TestService2()
+               })
         
-//        cocaine.register.register(assembly: Assembly.init(buildType: I_TestService1.self, memoryPolicy: .Strong, instanceScope: .Singleton, buildBlock: { () -> AnyObject in
-//            return TestService1()
-//        }))
-//
-//        cocaine.register.register(assembly: Assembly.init(buildType: I_TestService2.self, memoryPolicy: .Strong, instanceScope: .Singleton, buildBlock: { () -> AnyObject in
-//            return TestService2()
-//        }))
+        let service1_v1:TestService1? = cocaine.injector.Inject(type: ITestService1.self) as? TestService1
+        let service1_v2:TestService1? = cocaine.injector.Inject(type: ITestService1.self) as? TestService1
         
-        let service1_inject1:TestService1? = cocaine.injector.tryInject()
-        let service2_inject1:TestService2? = cocaine.injector.tryInject()
+        XCTAssertEqual(service1_v1, service1_v2)
+    }
+    
+    func testRemove(){
         
-//        cocaine.register.register(assembly: Assembly.init(buildType: I_TestService1.self, memoryPolicy: .Strong, instanceScope: .Singleton, buildBlock: { () -> AnyObject in
-//            return TestService1()
-//        }))
-//
-//        cocaine.register.register(assembly: Assembly.init(buildType: I_TestService2.self, memoryPolicy: .Strong, instanceScope: .Singleton, buildBlock: { () -> AnyObject in
-//            return TestService2()
-//        }))
+        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService1.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+                   return TestService1(id: "1")
+                      })
+                      
+        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+                                
+                                 return TestService2()
+                            })
         
+        var service2:ITestService2? = cocaine.injector.Inject()
+        XCTAssert(service2 != nil)
         
-        let service1_inject2:TestService1? = cocaine.injector.tryInject()
-        let service2_inject2:TestService2? = cocaine.injector.tryInject()
-        
-        XCTAssertEqual(service1_inject1, service1_inject2)
-        XCTAssertEqual(service2_inject1, service2_inject2)
-        
+        self.cocaine.cleaner.CleanInstance(type: ITestService2.self)
+        service2 = cocaine.injector.Inject()
+        XCTAssert(service2 == nil)
     }
     
     func testExample() {

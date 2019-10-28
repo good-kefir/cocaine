@@ -12,4 +12,5 @@ public protocol ICocaine  {
 
     var register:IRegister { get }
     var injector:IInjector { get }
+    var cleaner:ICleaner   { get }
 }
