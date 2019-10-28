@@ -15,19 +15,19 @@ public class Cocaine : ICocaine, IRegister, IInjector, ICleaner
     lazy public var cleaner:ICleaner = self
     
     internal var instances:InstanceStorage<AnyObject>
-    internal var assemblyProviers:InstanceStorage<AnyObject>
+    internal var assemblys:InstanceStorage<AnyObject>
     
     required public init(){
         
         instances =  InstanceStorage<AnyObject>()
-        assemblyProviers = InstanceStorage<AnyObject>()
+        assemblys = InstanceStorage<AnyObject>()
     }
     
     //MARK: - IRegister
     
     public func Register(assembly:IAssembly){
         let key = String (describing: assembly.buildType)
-        self.assemblyProviers.add(object: assembly, key:key)
+        self.assemblys.add(object: assembly, key:key)
     }
     
     public func Register(module: IModule) {
@@ -55,13 +55,25 @@ public class Cocaine : ICocaine, IRegister, IInjector, ICleaner
     //MARK: ICleaner
     public func CleanInstance<T:Any>(type:T) {
         let key = String(describing: type)
-        self.assemblyProviers.remove(key: key)
+        self.assemblys.remove(key: key)
         self.instances.remove(key: key)
+    }
+    
+    public func CleanAll() {
+        
+        let assemblysAll:[IAssembly] = assemblys.all() as! [IAssembly]
+        
+        for assembly:IAssembly in assemblysAll{
+            
+            let key = String (describing: assembly.buildType)
+            self.assemblys.remove(key: key)
+            self.instances.remove(key: key)
+        }
     }
     
     private func _Inject<T>(key:String) -> T?{
         
-        guard let assembly:IAssembly = self.assemblyProviers.object(key: key) as? IAssembly else {
+        guard let assembly:IAssembly = self.assemblys.object(key: key) as? IAssembly else {
                   return nil
               }
               

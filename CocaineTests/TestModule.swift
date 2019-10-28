@@ -20,8 +20,6 @@ class TestModule : IModule{
             Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
                 return TestService2(id: "2")
             }
-        
-        
         ]
     }
 }

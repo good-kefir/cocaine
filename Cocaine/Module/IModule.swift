@@ -9,6 +9,5 @@
 import Foundation
 
 public protocol IModule{
-    
     func assemblys() -> [IAssembly]
 }

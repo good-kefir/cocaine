@@ -34,10 +34,8 @@
 		FFC7E7AC23678B4F00FD5107 /* Cocaine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7AB23678B4F00FD5107 /* Cocaine.swift */; };
 		FFC7E7B023678B8E00FD5107 /* InstanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7AE23678B8E00FD5107 /* InstanceStorage.swift */; };
 		FFC7E7B123678B8E00FD5107 /* IInstanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7AF23678B8E00FD5107 /* IInstanceStorage.swift */; };
-		FFC7E7B323678BA500FD5107 /* IAssemblyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7B223678BA500FD5107 /* IAssemblyProvider.swift */; };
 		FFC7E7B523678BBD00FD5107 /* IInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7B423678BBD00FD5107 /* IInjector.swift */; };
 		FFC7E7B723678BD700FD5107 /* IRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7B623678BD600FD5107 /* IRegister.swift */; };
-		FFC7E7B923678C1900FD5107 /* ComponentsObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7B823678C1900FD5107 /* ComponentsObjc.swift */; };
 		FFC7E7BB23679A0D00FD5107 /* ICleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7BA23679A0D00FD5107 /* ICleaner.swift */; };
 		FFC7E7BE23679F3A00FD5107 /* IModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7BD23679F3A00FD5107 /* IModule.swift */; };
 		FFC7E7C02367A09900FD5107 /* TestModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7BF2367A09900FD5107 /* TestModule.swift */; };
@@ -103,10 +101,8 @@
 		FFC7E7AB23678B4F00FD5107 /* Cocaine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocaine.swift; sourceTree = "<group>"; };
 		FFC7E7AE23678B8E00FD5107 /* InstanceStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceStorage.swift; sourceTree = "<group>"; };
 		FFC7E7AF23678B8E00FD5107 /* IInstanceStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IInstanceStorage.swift; sourceTree = "<group>"; };
-		FFC7E7B223678BA500FD5107 /* IAssemblyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAssemblyProvider.swift; sourceTree = "<group>"; };
 		FFC7E7B423678BBD00FD5107 /* IInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IInjector.swift; sourceTree = "<group>"; };
 		FFC7E7B623678BD600FD5107 /* IRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRegister.swift; sourceTree = "<group>"; };
-		FFC7E7B823678C1900FD5107 /* ComponentsObjc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsObjc.swift; sourceTree = "<group>"; };
 		FFC7E7BA23679A0D00FD5107 /* ICleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICleaner.swift; sourceTree = "<group>"; };
 		FFC7E7BD23679F3A00FD5107 /* IModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IModule.swift; sourceTree = "<group>"; };
 		FFC7E7BF2367A09900FD5107 /* TestModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModule.swift; sourceTree = "<group>"; };
@@ -255,10 +251,8 @@
 		FF641E9D1F7693CF00AFB2D7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FFC7E7B823678C1900FD5107 /* ComponentsObjc.swift */,
 				FFC7E7AD23678B8E00FD5107 /* storage */,
 				FFC7E7A323678A8B00FD5107 /* InstanceScope.swift */,
-				FFC7E7B223678BA500FD5107 /* IAssemblyProvider.swift */,
 				FFC7E7B423678BBD00FD5107 /* IInjector.swift */,
 				FFC7E7B623678BD600FD5107 /* IRegister.swift */,
 				FFC7E7BA23679A0D00FD5107 /* ICleaner.swift */,
@@ -510,8 +504,6 @@
 				FFC7E7B023678B8E00FD5107 /* InstanceStorage.swift in Sources */,
 				FFC7E7AA23678B2100FD5107 /* ICocaine.swift in Sources */,
 				FFC7E7BE23679F3A00FD5107 /* IModule.swift in Sources */,
-				FFC7E7B923678C1900FD5107 /* ComponentsObjc.swift in Sources */,
-				FFC7E7B323678BA500FD5107 /* IAssemblyProvider.swift in Sources */,
 				FFB69C9D1FCD33430019FC17 /* Assembly.swift in Sources */,
 				FFB69C9B1FCD33340019FC17 /* IAssembly.swift in Sources */,
 				FFC7E7AC23678B4F00FD5107 /* Cocaine.swift in Sources */,

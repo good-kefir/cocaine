@@ -82,6 +82,33 @@ class CocaineTests: XCTestCase {
         XCTAssert(service2 == nil)
     }
     
+    func testRemoveAll(){
+        
+        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService1.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+                          return TestService1(id: "1")
+                             })
+                             
+        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+                            
+                return TestService2(id: "2")
+                        })
+            
+        var service1:ITestService1? = cocaine.injector.Inject()
+        XCTAssert(service1 != nil)
+        
+        var service2:ITestService2? = cocaine.injector.Inject()
+        XCTAssert(service2 != nil)
+        
+        self.cocaine.cleaner.CleanAll()
+        
+        service1 = cocaine.injector.Inject()
+        XCTAssert(service1 == nil)
+              
+        service2 = cocaine.injector.Inject()
+        XCTAssert(service2 == nil)
+        
+    }
+    
     func testModule(){
         
         let module:TestModule = TestModule()

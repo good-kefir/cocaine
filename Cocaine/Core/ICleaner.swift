@@ -10,4 +10,5 @@ import Foundation
 
 public protocol ICleaner{
     func CleanInstance<T:Any>(type:T)
+    func CleanAll()
 }
