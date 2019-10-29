@@ -1,5 +1,5 @@
 //
-//  ITestService1.swift
+//  TestService1.swift
 //  Cocaine
 //
 //  Created by Alexey Ivankov on 22.03.17.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-public protocol ITestService1 : class {
-    
+public class ServiceExample1 : IServiceExample1
+{
+
 }

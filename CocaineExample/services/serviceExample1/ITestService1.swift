@@ -1,5 +1,5 @@
 //
-//  ITestService2.swift
+//  ITestService1.swift
 //  Cocaine
 //
 //  Created by Alexey Ivankov on 22.03.17.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-public protocol ITestService2 : class
-{
-    var param1:String { get }
-    var param2:String { get }
+public protocol IServiceExample1 : class {
+    
 }

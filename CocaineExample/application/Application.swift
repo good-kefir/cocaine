@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Cocaine
 
-class Application : UIApplication, I_Application
+class Application : UIApplication, IApplication
 {
     private(set) var cocaine:ICocaine!
     
@@ -18,19 +18,25 @@ class Application : UIApplication, I_Application
         
         super.init()
         self.cocaine = Cocaine()
+        
         loadAssemblys()
+        loadModules()
     }
         
-    func loadAssemblys()
+    private func loadAssemblys()
     {
-        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService1.self, instanceScope: .Singleton) { (injector) -> AnyObject in
-            return TestService1()
+        self.cocaine.register.Register(assembly: Assembly(buildType: IServiceExample1.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+            return ServiceExample1()
         })
         
-        self.cocaine.register.Register(assembly: Assembly(buildType: ITestService2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
+        self.cocaine.register.Register(assembly: Assembly(buildType: IServiceExample2.self, instanceScope: .Singleton) { (injector) -> AnyObject in
             
-             return TestService2(param1: "1", param2: "2")
+             return ServiceExample2(param1: "1", param2: "2")
         })
-        
+    }
+    
+    private func loadModules(){
+        let module:ExampleModule = ExampleModule()
+        self.cocaine.register.Register(module: module)
     }
 }

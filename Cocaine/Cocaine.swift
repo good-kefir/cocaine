@@ -30,7 +30,7 @@ public class Cocaine : ICocaine, IRegister, IInjector, ICleaner
         self.assemblys.add(object: assembly, key:key)
     }
     
-    public func Register(module: IModule) {
+    public func Register(module: IAssemblyModule) {
         
         let assemblys = module.assemblys()
         

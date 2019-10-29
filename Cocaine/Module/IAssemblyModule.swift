@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol IModule{
+public protocol IAssemblyModule{
     func assemblys() -> [IAssembly]
 }

@@ -9,7 +9,7 @@
 import Foundation
 import Cocaine
 
-public protocol I_Application {
+public protocol IApplication {
     
     var cocaine:ICocaine! { get }
     

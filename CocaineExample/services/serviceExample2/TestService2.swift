@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class TestService2 : ITestService2
+public class ServiceExample2 : IServiceExample2
 {
     public var param1:String
     public var param2:String
