@@ -99,7 +99,7 @@ class CocaineTests: XCTestCase {
         var service2:ITestService2? = cocaine.injector.Inject()
         XCTAssert(service2 != nil)
         
-        self.cocaine.cleaner.CleanAll()
+        self.cocaine.cleaner.RemoveAllInstancesFromDI()
         
         service1 = cocaine.injector.Inject()
         XCTAssert(service1 == nil)

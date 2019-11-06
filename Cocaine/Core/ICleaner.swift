@@ -9,6 +9,7 @@
 import Foundation
 
 public protocol ICleaner{
-    func CleanInstance<T:Any>(type:T)
-    func CleanAll()
+    func RemoveInstanceFromDI<T:Any>(type:T)
+    func RemoveAssemblyFromDI<T:Any>(type:T)
+    func RemoveAllInstancesFromDI()
 }

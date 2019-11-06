@@ -53,22 +53,24 @@ public class Cocaine : ICocaine, IRegister, IInjector, ICleaner
     }
     
     //MARK: ICleaner
-    public func CleanInstance<T:Any>(type:T) {
+    public func RemoveInstanceFromDI<T:Any>(type:T){
         let key = String(describing: type)
-        self.assemblys.remove(key: key)
         self.instances.remove(key: key)
     }
     
-    public func CleanAll() {
-        
+    public func RemoveAssemblyFromDI<T:Any>(type:T){
+        let key = String(describing: type)
+        self.assemblys.remove(key: key)
+    }
+    
+    public func RemoveAllInstancesFromDI(){
         let assemblysAll:[IAssembly] = assemblys.all() as! [IAssembly]
-        
-        for assembly:IAssembly in assemblysAll{
             
-            let key = String (describing: assembly.buildType)
-            self.assemblys.remove(key: key)
-            self.instances.remove(key: key)
-        }
+            for assembly:IAssembly in assemblysAll{
+                
+                let key = String (describing: assembly.buildType)
+                self.instances.remove(key: key)
+            }
     }
     
     private func _Inject<T>(key:String) -> T?{

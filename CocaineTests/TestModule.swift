@@ -9,7 +9,7 @@
 import Foundation
 import Cocaine
 
-class TestModule : IModule{
+class TestModule : IAssemblyModule{
     func assemblys() -> [IAssembly] {
         return [
         
