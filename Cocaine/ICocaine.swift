@@ -9,8 +9,6 @@
 import Foundation
 
 public protocol ICocaine  {
-
-    var register:IRegister { get }
-    var injector:IInjector { get }
-    var cleaner:ICleaner   { get }
+    
+    static func create() -> IContainer
 }

@@ -8,11 +8,19 @@
 
 import Foundation
 import UIKit
+import Cocaine
 
 public func Inject<T>() -> T!{
     
-    let application:IApplication = UIApplication.shared as! Application
-    return application.cocaine.injector.Inject()
+    let applicationContext:IApplicationContext = UIApplication.shared as! Application
+    return applicationContext.container.receive(type: T.self)
+}
+
+public func Register(type:Any,
+                     scope: InstanceScope,
+                     main: @escaping (IContainer) -> (AnyObject)){
     
+    let applicationContext:IApplicationContext = UIApplication.shared as! Application
+    applicationContext.container.register(type: type, scope: scope, main: main)
 }
 

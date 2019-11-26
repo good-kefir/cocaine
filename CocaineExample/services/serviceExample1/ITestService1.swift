@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol IServiceExample1 : class {
+public protocol IServiceExample1 : AnyObject {
     
 }

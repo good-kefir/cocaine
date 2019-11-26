@@ -20,6 +20,7 @@ protocol IInstanceStorage
     
     func remove(object:TypeObject)
     func remove(key:String)
+    func removeAll()
     
     func all() -> [TypeObject]
 }

@@ -9,10 +9,11 @@
 import Foundation
 
 public protocol IAssembly  : class  {
-
+    
     var buildType:Any { get }
     var instanceScope:InstanceScope { get }
+    var container:IContainer { get }
  
-    func build(injector:IInjector) -> AnyObject
+    func build() -> AnyObject
 }
 

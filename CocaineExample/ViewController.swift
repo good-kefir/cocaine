@@ -11,16 +11,14 @@ import Cocaine
 
 class ViewController: UIViewController
 {
-    var service1:IServiceExample1 = Inject()
-    var service2:IServiceExample2 = Inject()
-    var service3:IServiceExample3 = Inject()
+    lazy var service1:IServiceExample1 = Inject()
+    lazy var service2:ServiceExample2 = Inject()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(service1)
         print(service2)
-        print(service3)
         
         // Do any additional setup after loading the view, typically from a nib.
     }

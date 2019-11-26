@@ -20,10 +20,13 @@
 		FF653CF523683CD2008F7A8C /* ServiceExample3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF653CF423683CD2008F7A8C /* ServiceExample3.swift */; };
 		FF653CF723683CFA008F7A8C /* IServiceExample4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF653CF623683CFA008F7A8C /* IServiceExample4.swift */; };
 		FF653CF923683D05008F7A8C /* ServiceExample4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF653CF823683D05008F7A8C /* ServiceExample4.swift */; };
+		FF663D6D238D7B910099C6B5 /* IContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D6C238D7B910099C6B5 /* IContainer.swift */; };
+		FF663D6F238D7B990099C6B5 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D6E238D7B990099C6B5 /* Container.swift */; };
+		FF663D75238D9B100099C6B5 /* IApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D74238D9B100099C6B5 /* IApplicationContext.swift */; };
+		FF663D77238DACB80099C6B5 /* TestCocaine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D76238DACB80099C6B5 /* TestCocaine.swift */; };
 		FFB69C9B1FCD33340019FC17 /* IAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69C9A1FCD33340019FC17 /* IAssembly.swift */; };
 		FFB69C9D1FCD33430019FC17 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69C9C1FCD33430019FC17 /* Assembly.swift */; };
 		FFB69CA01FCF52510019FC17 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69C9F1FCF52510019FC17 /* Application.swift */; };
-		FFB69CA21FCF526C0019FC17 /* IApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69CA11FCF526C0019FC17 /* IApplication.swift */; };
 		FFB69CC31FCF65B10019FC17 /* Cocaine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF32ADA21DD9FC91001608BB /* Cocaine.framework */; };
 		FFB69CD11FCF66840019FC17 /* TestService1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69CCE1FCF66830019FC17 /* TestService1.swift */; };
 		FFB69CD21FCF66840019FC17 /* TestService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69CCF1FCF66830019FC17 /* TestService2.swift */; };
@@ -32,12 +35,6 @@
 		FFC7E7AC23678B4F00FD5107 /* Cocaine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7AB23678B4F00FD5107 /* Cocaine.swift */; };
 		FFC7E7B023678B8E00FD5107 /* InstanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7AE23678B8E00FD5107 /* InstanceStorage.swift */; };
 		FFC7E7B123678B8E00FD5107 /* IInstanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7AF23678B8E00FD5107 /* IInstanceStorage.swift */; };
-		FFC7E7B523678BBD00FD5107 /* IInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7B423678BBD00FD5107 /* IInjector.swift */; };
-		FFC7E7B723678BD700FD5107 /* IRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7B623678BD600FD5107 /* IRegister.swift */; };
-		FFC7E7BB23679A0D00FD5107 /* ICleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7BA23679A0D00FD5107 /* ICleaner.swift */; };
-		FFC7E7BE23679F3A00FD5107 /* IAssemblyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7BD23679F3A00FD5107 /* IAssemblyModule.swift */; };
-		FFC7E7C02367A09900FD5107 /* TestModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7BF2367A09900FD5107 /* TestModule.swift */; };
-		FFC7E7C323682C8200FD5107 /* ExampleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7C223682C8200FD5107 /* ExampleModule.swift */; };
 		FFC7E7CC23682ECB00FD5107 /* TestService1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7C623682ECB00FD5107 /* TestService1.swift */; };
 		FFC7E7CD23682ECB00FD5107 /* ITestService1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7C723682ECB00FD5107 /* ITestService1.swift */; };
 		FFC7E7CE23682ECB00FD5107 /* TestService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7E7CA23682ECB00FD5107 /* TestService2.swift */; };
@@ -78,11 +75,13 @@
 		FF653CF423683CD2008F7A8C /* ServiceExample3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceExample3.swift; sourceTree = "<group>"; };
 		FF653CF623683CFA008F7A8C /* IServiceExample4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceExample4.swift; sourceTree = "<group>"; };
 		FF653CF823683D05008F7A8C /* ServiceExample4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceExample4.swift; sourceTree = "<group>"; };
+		FF663D6C238D7B910099C6B5 /* IContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IContainer.swift; sourceTree = "<group>"; };
+		FF663D6E238D7B990099C6B5 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		FF663D74238D9B100099C6B5 /* IApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IApplicationContext.swift; sourceTree = "<group>"; };
+		FF663D76238DACB80099C6B5 /* TestCocaine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCocaine.swift; sourceTree = "<group>"; };
 		FFB69C9A1FCD33340019FC17 /* IAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAssembly.swift; sourceTree = "<group>"; };
 		FFB69C9C1FCD33430019FC17 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		FFB69C9F1FCF52510019FC17 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		FFB69CA11FCF526C0019FC17 /* IApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IApplication.swift; sourceTree = "<group>"; };
-		FFB69CAF1FCF65960019FC17 /* CocaineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocaineTests.swift; sourceTree = "<group>"; };
 		FFB69CB11FCF65960019FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB69CBE1FCF65B10019FC17 /* CocaineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocaineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB69CCE1FCF66830019FC17 /* TestService1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestService1.swift; sourceTree = "<group>"; };
@@ -92,12 +91,6 @@
 		FFC7E7AB23678B4F00FD5107 /* Cocaine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocaine.swift; sourceTree = "<group>"; };
 		FFC7E7AE23678B8E00FD5107 /* InstanceStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceStorage.swift; sourceTree = "<group>"; };
 		FFC7E7AF23678B8E00FD5107 /* IInstanceStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IInstanceStorage.swift; sourceTree = "<group>"; };
-		FFC7E7B423678BBD00FD5107 /* IInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IInjector.swift; sourceTree = "<group>"; };
-		FFC7E7B623678BD600FD5107 /* IRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRegister.swift; sourceTree = "<group>"; };
-		FFC7E7BA23679A0D00FD5107 /* ICleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICleaner.swift; sourceTree = "<group>"; };
-		FFC7E7BD23679F3A00FD5107 /* IAssemblyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAssemblyModule.swift; sourceTree = "<group>"; };
-		FFC7E7BF2367A09900FD5107 /* TestModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModule.swift; sourceTree = "<group>"; };
-		FFC7E7C223682C8200FD5107 /* ExampleModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModule.swift; sourceTree = "<group>"; };
 		FFC7E7C623682ECB00FD5107 /* TestService1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestService1.swift; sourceTree = "<group>"; };
 		FFC7E7C723682ECB00FD5107 /* ITestService1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITestService1.swift; sourceTree = "<group>"; };
 		FFC7E7CA23682ECB00FD5107 /* TestService2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestService2.swift; sourceTree = "<group>"; };
@@ -182,7 +175,6 @@
 		FF32ADA41DD9FC91001608BB /* Cocaine */ = {
 			isa = PBXGroup;
 			children = (
-				FFC7E7BC23679F2300FD5107 /* Module */,
 				FF641E9D1F7693CF00AFB2D7 /* Core */,
 				FFB69C991FCD33340019FC17 /* Assembly */,
 				FF32ADA61DD9FC91001608BB /* Info.plist */,
@@ -195,7 +187,6 @@
 		FF32ADCC1DDA039D001608BB /* CocaineExample */ = {
 			isa = PBXGroup;
 			children = (
-				FFC7E7C123682C7100FD5107 /* modules */,
 				FFB69C9E1FCF52510019FC17 /* application */,
 				FF0037631F7C184400BF11BF /* di */,
 				FF2F36C91E82A98A0027CAC8 /* services */,
@@ -213,13 +204,20 @@
 		FF641E9D1F7693CF00AFB2D7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FF663D6B238D7B860099C6B5 /* container */,
 				FFC7E7AD23678B8E00FD5107 /* storage */,
 				FFC7E7A323678A8B00FD5107 /* InstanceScope.swift */,
-				FFC7E7B423678BBD00FD5107 /* IInjector.swift */,
-				FFC7E7B623678BD600FD5107 /* IRegister.swift */,
-				FFC7E7BA23679A0D00FD5107 /* ICleaner.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		FF663D6B238D7B860099C6B5 /* container */ = {
+			isa = PBXGroup;
+			children = (
+				FF663D6C238D7B910099C6B5 /* IContainer.swift */,
+				FF663D6E238D7B990099C6B5 /* Container.swift */,
+			);
+			path = container;
 			sourceTree = "<group>";
 		};
 		FFB69C991FCD33340019FC17 /* Assembly */ = {
@@ -235,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				FFB69C9F1FCF52510019FC17 /* Application.swift */,
-				FFB69CA11FCF526C0019FC17 /* IApplication.swift */,
+				FF663D74238D9B100099C6B5 /* IApplicationContext.swift */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -245,9 +243,8 @@
 			children = (
 				FFB69CCE1FCF66830019FC17 /* TestService1.swift */,
 				FFB69CCF1FCF66830019FC17 /* TestService2.swift */,
-				FFB69CAF1FCF65960019FC17 /* CocaineTests.swift */,
 				FFB69CB11FCF65960019FC17 /* Info.plist */,
-				FFC7E7BF2367A09900FD5107 /* TestModule.swift */,
+				FF663D76238DACB80099C6B5 /* TestCocaine.swift */,
 			);
 			path = CocaineTests;
 			sourceTree = "<group>";
@@ -259,22 +256,6 @@
 				FFC7E7AF23678B8E00FD5107 /* IInstanceStorage.swift */,
 			);
 			path = storage;
-			sourceTree = "<group>";
-		};
-		FFC7E7BC23679F2300FD5107 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				FFC7E7BD23679F3A00FD5107 /* IAssemblyModule.swift */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		FFC7E7C123682C7100FD5107 /* modules */ = {
-			isa = PBXGroup;
-			children = (
-				FFC7E7C223682C8200FD5107 /* ExampleModule.swift */,
-			);
-			path = modules;
 			sourceTree = "<group>";
 		};
 		FFC7E7C423682ECB00FD5107 /* serviceExample4 */ = {
@@ -465,16 +446,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC7E7BB23679A0D00FD5107 /* ICleaner.swift in Sources */,
 				FFC7E7A423678A8B00FD5107 /* InstanceScope.swift in Sources */,
 				FFC7E7B023678B8E00FD5107 /* InstanceStorage.swift in Sources */,
 				FFC7E7AA23678B2100FD5107 /* ICocaine.swift in Sources */,
-				FFC7E7BE23679F3A00FD5107 /* IAssemblyModule.swift in Sources */,
 				FFB69C9D1FCD33430019FC17 /* Assembly.swift in Sources */,
 				FFB69C9B1FCD33340019FC17 /* IAssembly.swift in Sources */,
+				FF663D6F238D7B990099C6B5 /* Container.swift in Sources */,
 				FFC7E7AC23678B4F00FD5107 /* Cocaine.swift in Sources */,
-				FFC7E7B723678BD700FD5107 /* IRegister.swift in Sources */,
-				FFC7E7B523678BBD00FD5107 /* IInjector.swift in Sources */,
+				FF663D6D238D7B910099C6B5 /* IContainer.swift in Sources */,
 				FFC7E7B123678B8E00FD5107 /* IInstanceStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,17 +465,16 @@
 				FF653CF523683CD2008F7A8C /* ServiceExample3.swift in Sources */,
 				FFB69CA01FCF52510019FC17 /* Application.swift in Sources */,
 				FF653CF923683D05008F7A8C /* ServiceExample4.swift in Sources */,
-				FFC7E7C323682C8200FD5107 /* ExampleModule.swift in Sources */,
 				FF00376B1F7D04DD00BF11BF /* DICore.swift in Sources */,
 				FF0037691F7D005E00BF11BF /* main.swift in Sources */,
 				FF32ADD01DDA039D001608BB /* ViewController.swift in Sources */,
+				FF663D75238D9B100099C6B5 /* IApplicationContext.swift in Sources */,
 				FF32ADCE1DDA039D001608BB /* AppDelegate.swift in Sources */,
 				FF653CF323683CC8008F7A8C /* IServiceExample3.swift in Sources */,
 				FFC7E7CE23682ECB00FD5107 /* TestService2.swift in Sources */,
 				FF653CF723683CFA008F7A8C /* IServiceExample4.swift in Sources */,
 				FFC7E7CD23682ECB00FD5107 /* ITestService1.swift in Sources */,
 				FFC7E7CF23682ECB00FD5107 /* ITestService2.swift in Sources */,
-				FFB69CA21FCF526C0019FC17 /* IApplication.swift in Sources */,
 				FFC7E7CC23682ECB00FD5107 /* TestService1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,8 +483,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC7E7C02367A09900FD5107 /* TestModule.swift in Sources */,
 				FFB69CD21FCF66840019FC17 /* TestService2.swift in Sources */,
+				FF663D77238DACB80099C6B5 /* TestCocaine.swift in Sources */,
 				FFB69CD11FCF66840019FC17 /* TestService1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

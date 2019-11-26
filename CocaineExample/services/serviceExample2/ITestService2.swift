@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol IServiceExample2 : class
+public protocol IServiceExample2 : AnyObject
 {
     var param1:String { get }
     var param2:String { get }

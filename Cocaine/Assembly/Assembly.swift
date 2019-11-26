@@ -11,21 +11,25 @@ import Foundation
 
 public class Assembly : IAssembly
 {
-    public let buildType: Any
+
+    public var buildType: Any
     public let instanceScope: InstanceScope
+    public let container:IContainer
     
-    let buildBlock: (_ injector:IInjector)->AnyObject
+    let buildBlock: (IContainer)->AnyObject
     
     required public init(buildType: Any,
                          instanceScope: InstanceScope,
-                         buildBlock:  @escaping (_ injector:IInjector)->AnyObject)
+                         container:IContainer,
+                         buildBlock:  @escaping (IContainer)->AnyObject)
     {
         self.buildType = buildType
         self.instanceScope = instanceScope
+        self.container = container
         self.buildBlock = buildBlock
     }
     
-    public func build(injector:IInjector) -> AnyObject {
-        return self.buildBlock(injector)
+    public func build() -> AnyObject {
+        return self.buildBlock(self.container)
     }
 }
