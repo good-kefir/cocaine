@@ -12,14 +12,10 @@ import  Cocaine
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?{
-        didSet{
-            self.loadInstances()
-        }
-    }
+    var window: UIWindow?
     
-    lazy var testService1:IServiceExample1 = Inject()
-    lazy var testService2:ServiceExample2 = Inject()
+    var testService1:IServiceExample1 = Inject()
+    var testService2:IServiceExample2 = Inject()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
@@ -29,19 +25,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    private func loadInstances()
-      {
-      
-        Register(type: IServiceExample1.self, scope: .Singleton) { (container) -> (AnyObject) in
-              return ServiceExample1()
-          }
-        
-        Register(type: ServiceExample2.self, scope: .Singleton) { (container) -> (AnyObject) in
-            return ServiceExample2(param1: "1", param2: "2")
-        }
-          
-      }
-
 }
 

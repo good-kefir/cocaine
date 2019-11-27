@@ -10,6 +10,7 @@ import Foundation
 
 public protocol IAssembly  : class  {
     
+    var name:String? { get }
     var buildType:Any { get }
     var instanceScope:InstanceScope { get }
     var container:IContainer { get }

@@ -10,5 +10,9 @@ import Foundation
 import Cocaine
 
 public protocol IApplicationContext{
-    var container:IContainer { get }
+    
+    func Inject<T>(name:String?) -> T!
+    func Register(type:Any,
+                  scope: InstanceScope,
+                  main: @escaping (IContainer) -> (AnyObject))
 }

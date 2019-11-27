@@ -11,7 +11,7 @@ import Foundation
 
 public class Assembly : IAssembly
 {
-
+    public var name:String?
     public var buildType: Any
     public let instanceScope: InstanceScope
     public let container:IContainer
@@ -19,11 +19,13 @@ public class Assembly : IAssembly
     let buildBlock: (IContainer)->AnyObject
     
     required public init(buildType: Any,
+                         name:String?,
                          instanceScope: InstanceScope,
                          container:IContainer,
                          buildBlock:  @escaping (IContainer)->AnyObject)
     {
         self.buildType = buildType
+        self.name = name
         self.instanceScope = instanceScope
         self.container = container
         self.buildBlock = buildBlock

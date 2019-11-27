@@ -24,6 +24,9 @@
 		FF663D6F238D7B990099C6B5 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D6E238D7B990099C6B5 /* Container.swift */; };
 		FF663D75238D9B100099C6B5 /* IApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D74238D9B100099C6B5 /* IApplicationContext.swift */; };
 		FF663D77238DACB80099C6B5 /* TestCocaine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D76238DACB80099C6B5 /* TestCocaine.swift */; };
+		FF663D81238DF2B50099C6B5 /* IDependencyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D80238DF2B50099C6B5 /* IDependencyLoader.swift */; };
+		FF663D84238DF3F20099C6B5 /* ExampleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D83238DF3F20099C6B5 /* ExampleModule.swift */; };
+		FF663D87238E05140099C6B5 /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF663D86238E05140099C6B5 /* Instance.swift */; };
 		FFB69C9B1FCD33340019FC17 /* IAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69C9A1FCD33340019FC17 /* IAssembly.swift */; };
 		FFB69C9D1FCD33430019FC17 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69C9C1FCD33430019FC17 /* Assembly.swift */; };
 		FFB69CA01FCF52510019FC17 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69C9F1FCF52510019FC17 /* Application.swift */; };
@@ -79,6 +82,9 @@
 		FF663D6E238D7B990099C6B5 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		FF663D74238D9B100099C6B5 /* IApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IApplicationContext.swift; sourceTree = "<group>"; };
 		FF663D76238DACB80099C6B5 /* TestCocaine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCocaine.swift; sourceTree = "<group>"; };
+		FF663D80238DF2B50099C6B5 /* IDependencyLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDependencyLoader.swift; sourceTree = "<group>"; };
+		FF663D83238DF3F20099C6B5 /* ExampleModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModule.swift; sourceTree = "<group>"; };
+		FF663D86238E05140099C6B5 /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		FFB69C9A1FCD33340019FC17 /* IAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAssembly.swift; sourceTree = "<group>"; };
 		FFB69C9C1FCD33430019FC17 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		FFB69C9F1FCF52510019FC17 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 				FF32ADA61DD9FC91001608BB /* Info.plist */,
 				FFC7E7AB23678B4F00FD5107 /* Cocaine.swift */,
 				FFC7E7A923678B2100FD5107 /* ICocaine.swift */,
+				FF663D80238DF2B50099C6B5 /* IDependencyLoader.swift */,
 			);
 			path = Cocaine;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 		FF32ADCC1DDA039D001608BB /* CocaineExample */ = {
 			isa = PBXGroup;
 			children = (
+				FF663D82238DF3DC0099C6B5 /* exampleModule */,
 				FFB69C9E1FCF52510019FC17 /* application */,
 				FF0037631F7C184400BF11BF /* di */,
 				FF2F36C91E82A98A0027CAC8 /* services */,
@@ -204,6 +212,7 @@
 		FF641E9D1F7693CF00AFB2D7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FF663D85238E05030099C6B5 /* instance */,
 				FF663D6B238D7B860099C6B5 /* container */,
 				FFC7E7AD23678B8E00FD5107 /* storage */,
 				FFC7E7A323678A8B00FD5107 /* InstanceScope.swift */,
@@ -218,6 +227,22 @@
 				FF663D6E238D7B990099C6B5 /* Container.swift */,
 			);
 			path = container;
+			sourceTree = "<group>";
+		};
+		FF663D82238DF3DC0099C6B5 /* exampleModule */ = {
+			isa = PBXGroup;
+			children = (
+				FF663D83238DF3F20099C6B5 /* ExampleModule.swift */,
+			);
+			path = exampleModule;
+			sourceTree = "<group>";
+		};
+		FF663D85238E05030099C6B5 /* instance */ = {
+			isa = PBXGroup;
+			children = (
+				FF663D86238E05140099C6B5 /* Instance.swift */,
+			);
+			path = instance;
 			sourceTree = "<group>";
 		};
 		FFB69C991FCD33340019FC17 /* Assembly */ = {
@@ -446,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF663D87238E05140099C6B5 /* Instance.swift in Sources */,
 				FFC7E7A423678A8B00FD5107 /* InstanceScope.swift in Sources */,
 				FFC7E7B023678B8E00FD5107 /* InstanceStorage.swift in Sources */,
 				FFC7E7AA23678B2100FD5107 /* ICocaine.swift in Sources */,
@@ -453,6 +479,7 @@
 				FFB69C9B1FCD33340019FC17 /* IAssembly.swift in Sources */,
 				FF663D6F238D7B990099C6B5 /* Container.swift in Sources */,
 				FFC7E7AC23678B4F00FD5107 /* Cocaine.swift in Sources */,
+				FF663D81238DF2B50099C6B5 /* IDependencyLoader.swift in Sources */,
 				FF663D6D238D7B910099C6B5 /* IContainer.swift in Sources */,
 				FFC7E7B123678B8E00FD5107 /* IInstanceStorage.swift in Sources */,
 			);
@@ -473,6 +500,7 @@
 				FF653CF323683CC8008F7A8C /* IServiceExample3.swift in Sources */,
 				FFC7E7CE23682ECB00FD5107 /* TestService2.swift in Sources */,
 				FF653CF723683CFA008F7A8C /* IServiceExample4.swift in Sources */,
+				FF663D84238DF3F20099C6B5 /* ExampleModule.swift in Sources */,
 				FFC7E7CD23682ECB00FD5107 /* ITestService1.swift in Sources */,
 				FFC7E7CF23682ECB00FD5107 /* ITestService2.swift in Sources */,
 				FFC7E7CC23682ECB00FD5107 /* TestService1.swift in Sources */,

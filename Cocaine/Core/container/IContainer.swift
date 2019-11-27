@@ -10,12 +10,18 @@ import Foundation
 
 public protocol IContainer {
     
-    func register(type:Any,
-                  scope:InstanceScope,
-                  main:@escaping (IContainer)->(AnyObject))
-        
-    func receive<T>(type:T.Type) -> T
+    func registerBuildLazy(type:Any,
+                           name:String?,
+                           scope:InstanceScope,
+                           main:@escaping (IContainer)->(AnyObject))
     
-    func remove(type:AnyObject.Type)
+    func registerBuildNow(type:Any,
+                          name:String?,
+                          scope:InstanceScope,
+                          main:@escaping (IContainer)->(AnyObject))
+        
+    func receive<T>(type:T.Type, name:String?) -> T
+    
+    func remove(type:AnyObject.Type, name:String?)
     func removeAll()
 }

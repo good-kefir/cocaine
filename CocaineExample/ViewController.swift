@@ -11,14 +11,16 @@ import Cocaine
 
 class ViewController: UIViewController
 {
-    lazy var service1:IServiceExample1 = Inject()
-    lazy var service2:ServiceExample2 = Inject()
+    var service1:IServiceExample1 = Inject()
+    var service2:IServiceExample2 = Inject()
+    var service2Version2:IServiceExample2 = Inject(name: "version2")
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(service1)
         print(service2)
+        print(service2Version2)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -27,7 +29,5 @@ class ViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

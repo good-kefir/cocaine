@@ -10,17 +10,15 @@ import Foundation
 
 protocol IInstanceStorage
 {
-    associatedtype TypeObject:AnyObject;
+    associatedtype T:Any;
     
-    func add(object:TypeObject)
-    func add(object:TypeObject, key:String)
+    func add(object:T)
+    func add(object:T, key:String)
     
-    func object() -> TypeObject?
-    func object(key:String) -> TypeObject?
+    func object() -> T?
+    func object(key:String) -> T?
     
-    func remove(object:TypeObject)
+    func remove(object:T)
     func remove(key:String)
     func removeAll()
-    
-    func all() -> [TypeObject]
 }

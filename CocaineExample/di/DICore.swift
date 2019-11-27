@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import Cocaine
 
-public func Inject<T>() -> T!{
+public func Inject<T>(name:String? = nil) -> T!{
     
     let applicationContext:IApplicationContext = UIApplication.shared as! Application
-    return applicationContext.container.receive(type: T.self)
+    return applicationContext.Inject(name: name)
 }
 
 public func Register(type:Any,
@@ -21,6 +21,6 @@ public func Register(type:Any,
                      main: @escaping (IContainer) -> (AnyObject)){
     
     let applicationContext:IApplicationContext = UIApplication.shared as! Application
-    applicationContext.container.register(type: type, scope: scope, main: main)
+    applicationContext.Register(type: type, scope: scope, main: main)
 }
 

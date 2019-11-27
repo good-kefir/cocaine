@@ -17,5 +17,16 @@ class Application : UIApplication, IApplicationContext
         
         container = Cocaine.create()
         super.init()
+        ExampleModule.load(container: container)
+    }
+    
+    public func Inject<T>(name:String?) -> T!{
+        return self.container.receive(type: T.self, name: name)
+    }
+
+    public func Register(type:Any,
+                         scope: InstanceScope,
+                         main: @escaping (IContainer) -> (AnyObject)){
+        self.container.registerBuildLazy(type: type, name: nil, scope: scope, main: main)
     }
 }
